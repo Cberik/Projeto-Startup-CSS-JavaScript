@@ -57,7 +57,7 @@ Não é necessário instalar nada.
 
 1. Clone o repositório:
    ```bash
-   git clone <URL-DO-REPOSITORIO>
+   git clone <(https://github.com/Cberik/Projeto-Startup-CSS-JavaScript/tree/8c02e521f26f91ba0bbcacb282bf65cf975361c6/Startup%20ERIK)>
    ```
 2. Abra o arquivo `startup.html` no navegador (duplo clique).
 
