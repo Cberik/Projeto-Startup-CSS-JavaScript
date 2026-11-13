@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brike Place | Compra e Venda de Usados</title>
+    <!-- Link para o seu arquivo CSS -->
+    <link rel="stylesheet" href="startup.css">
+    <!-- Fonte Inter (Opcional, mas recomendada para o design moderno) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container"> <!-- HEADER / TOPO DO SITE -->
+        <header class="header">
+          <div class="container header__wrapper">
+            <a href="#" class="header__logo">
+              <img src="LOGOAJUSTADA-removebg-preview.png" alt="Logo Brike Market Place" class="header__logo-img">
+            </a>
+      
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                
+                <!-- BARRA DE PESQUISA -->
+                <li class="header__search-item">
+                  <form action="#" method="GET" class="header__search-form">
+                    <input 
+                      type="search" 
+                      name="q" 
+                      placeholder="Buscar desapegos..." 
+                      aria-label="Buscar produtos" 
+                      class="header__search-input"
+                    >
+                    <button type="submit" class="header__search-btn" aria-label="Pesquisar">🔍
+                    </button>
+                  </form>
+                </li>
+                
+                <li><a href="comofunc.html" class="header__nav-link">Como Funciona</a></li>
+
+                <li><a href="anuncios.html" class="header__nav-link">Meus Anúncios</a></li>
+              </ul>
+            </nav>
+      
+            <div class="header__actions">
+              <a href="pgDesp.html" class="btn btn--primary">Anunciar Desapego</a>
+            </div>
+          </div>
+        </header>
+      </div>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+            <div class="container">
+                
+                <!-- TÍTULO DA SEÇÃO -->
+                <section class="feed-section">
+                    <h1>Desapegos Recentes</h1>
+                    <p style="color: var(--color-text-muted);">Encontre produtos usados com ótimos preços perto de você.</p>
+                    
+                    <!-- GRADE DE PRODUTOS -->
+                    <div class="product-grid">
+                        
+                        <!-- CARD EXEMPLO 1 -->
+                        <article class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <img src="imgfone.jpg" alt="Fone de Ouvido Bluetooth">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">Fone de Ouvido Bluetooth</h3>
+                                <p class="product-card__price">R$ 150,00</p>
+                                <span class="product-card__badge">Semi-novo (6 meses de uso)</span>
+                            </div>
+                        </article>
+
+                        <!-- CARD EXEMPLO 2 -->
+                        <article class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <img src="tenis" alt="Tênis Esportivo Vermelho">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">Tênis Esportivo Vermelho</h3>
+                                <p class="product-card__price">R$ 180,00</p>
+                                <span class="product-card__badge">Usado - Ótimo estado</span>
+                            </div>
+                        </article>
+
+                        <!-- CARD EXEMPLO 3 -->
+                        <article class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <img src="relogio" alt="Relógio Masculino">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">Relógio Masculino</h3>
+                                <p class="product-card__price">R$ 125,00</p>
+                                <span class="product-card__badge">Marcas de uso leves</span>
+                            </div>
+                        </article>
+
+                        <!-- CARD EXEMPLO 4 -->
+                        <article class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <img src="caemra.jfif" alt="Câmera Vintage Analógica">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">Câmera Analógica</h3>
+                                <p class="product-card__price">R$ 620,00</p>
+                                <span class="product-card__badge">Item de Colecionador</span>
+                            </div>
+                        </article>
+
+                        <!-- CARD EXEMPLO 5 -->
+                        <article class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <img src="video game.jpg" alt="Video Game">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">PlayStation</h3>
+                                <p class="product-card__price">R$ 2.150,00</p>
+                                <span class="product-card__badge">Usado - Ótimo estado</span>
+                            </div>
+                        </article>
+
+                        <!-- CARD EXEMPLO 6 -->
+                        <article class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <img src="imgmarruá.png" alt="Marruá Agrale">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">Marruá Agrale</h3>
+                                <p class="product-card__price">R$ 235.000,00</p>
+                                <span class="product-card__badge">Item de Colecionador</span>
+                            </div>
+                        </article>
+                        <!-- CARD EXEMPLO 7 -->
+                        <article class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <img src="patinete.jpg" alt="Patinete elétrico">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">Patinete elétrico</h3>
+                                <p class="product-card__price">R$ 1230,00</p>
+                                <span class="product-card__badge">Semi-novo (2 meses de uso) - </span>
+                            </div>
+                        </article>
+                        <!-- CARD EXEMPLO 8 -->
+                        <article class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <img src="macbook.jpg" alt="macbook">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">Macbook Apple</h3>
+                                <p class="product-card__price">R$ 6580,00</p>
+                                <span class="product-card__badge">Novo</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <!-- RODAPÉ -->
+        <footer class="footer">
+            <div class="container">
+                <p class="footer__text">&copy; 2026 Brike Place. Economia e desapego consciente.</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

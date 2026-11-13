@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brike Place | Cadastro de desapego</title>
+  <!-- Link para o seu arquivo CSS -->
+  <link rel="stylesheet" href="startup.css">
+  <!-- Fonte Inter (Opcional, mas recomendada para o design moderno) -->
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+  <script src="cadastro.js"></script>
+</body>
+</html>
+
+  <div class="app-container">
+
+    <!-- HEADER / TOPO DO SITE -->
+    <header class="header">
+      <div class="container header__wrapper">
+
+        <a href="startup.html" class="header__logo">
+          <img src="LOGOAJUSTADA-removebg-preview.png" alt="Logo Brike Market Place" class="header__logo-img">
+        </a>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <!-- BARRA DE PESQUISA -->
+            <li class="header__search-item">
+              <form action="#" method="GET" class="header__search-form">
+                <input type="search" name="q" placeholder="Buscar desapegos..." aria-label="Buscar produtos"
+                  class="header__search-input">
+                <button type="submit" class="header__search-btn" aria-label="Pesquisar">🔍
+                </button>
+              </form>
+            </li>
+            <li><a href="comofunc.html" class="header__nav-link">Como Funciona</a></li>
+            <li><a href="anuncios.html" class="header__nav-link">Meus Anúncios</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="ad-form-section">
+        <header class="ad-form__header">
+          <h1 class="ad-form__title">Anunciar Desapego</h1>
+          <p class="ad-form__subtitle">Preencha os dados abaixo para publicar seu item no Brike Place.</p>
+        </header>
+
+        <form action="#" method="POST" enctype="multipart/form-data" class="ad-form">
+
+          <!-- BLOCO 1: DETALHES DO ITEM -->
+          <fieldset class="ad-form__fieldset">
+            <legend class="ad-form__legend">Informações do Produto</legend>
+
+            <div class="ad-form__group">
+              <label for="item-titulo" class="ad-form__label">Título do Anúncio *</label>
+              <input type="text" id="item-titulo" name="titulo" placeholder="Ex: Bicicleta Aro 29, Sofá 3 lugares..."
+                required class="ad-form__input">
+            </div>
+
+            <div class="ad-form__row">
+              <div class="ad-form__group">
+
+                <label for="item-categoria" class="ad-form__label">Categoria *</label>
+                <select id="item-categoria" name="categoria" required class="ad-form__select">
+                  <option value="" disabled selected>Selecione uma categoria</option>
+                  <option value="eletronicos">Eletrônicos e Celulares</option>
+                  <option value="moveis">Móveis e Decoração</option>
+                  <option value="roupas">Roupas e Calçados</option>
+                  <option value="esportes">Esportes e Lazer</option>
+                  <option value="veiculos">Peças e Acessórios</option>
+                  <option value="outros">Outros</option>
+                </select>
+
+              </div>
+
+              <div class="ad-form__group">
+
+                <label for="item-conservacao" class="ad-form__label">Estado de Conservação *</label>
+                <select id="item-conservacao" name="conservacao" required class="ad-form__select">
+                  <option value="" disabled selected>Selecione o estado</option>
+                  <option value="novo">Novo (Nunca usado)</option>
+                  <option value="seminovo">Seminovo (Pouquíssimo uso, sem marcas)</option>
+                  <option value="usado-bom">Usado - Bom estado</option>
+                  <option value="usado-marcas">Usado - Com marcas de uso</option>
+                  <option value="defeito">Com defeito / Para retirada de peças</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="ad-form__row">
+              <div class="ad-form__group">
+                <label for="item-valor" class="ad-form__label">Valor do Objeto (R$) *</label>
+                <input type="number" id="item-valor" name="valor" step="0.01" min="0" placeholder="0,00" required
+                  class="ad-form__input">
+              </div>
+
+              <div class="ad-form__group ad-form__group--checkbox">
+                <input type="checkbox" id="item-negociavel" name="negociavel" class="ad-form__checkbox">
+                <label for="item-negociavel" class="ad-form__label-inline">Aceito propostas / Valor negociável</label>
+              </div>
+            </div>
+
+            <div class="ad-form__group">
+              <label for="item-descricao" class="ad-form__label">Descrição detalhada *</label>
+              <textarea id="item-descricao" name="descricao" rows="4"
+                placeholder="Conte mais sobre o item, tempo de uso, dimensões ou motivo do desapego..." required
+                class="ad-form__textarea"></textarea>
+            </div>
+
+            <div class="ad-form__group">
+              <label for="item-fotos" class="ad-form__label">Fotos do Item (Máx. 5 fotos) *</label>
+              <input type="file" id="item-fotos" name="fotos[]" accept="image/*" multiple required
+                class="ad-form__file">
+            </div>
+          </fieldset>
+
+          <!-- BLOCO 2: DADOS DO ANUNCIANTE E LOCALIZAÇÃO -->
+          <fieldset class="ad-form__fieldset">
+            <legend class="ad-form__legend">Localização e Contato</legend>
+
+            <div class="ad-form__row">
+              <div class="ad-form__group">
+                <label for="anunciante-nome" class="ad-form__label">Nome do Anunciante *</label>
+                <input type="text" id="anunciante-nome" name="nome_anunciante" placeholder="Seu nome ou apelido"
+                  required class="ad-form__input">
+              </div>
+
+              <div class="ad-form__group">
+                <label for="anunciante-telefone" class="ad-form__label">WhatsApp / Telefone *</label>
+                <input type="tel" id="anunciante-telefone" name="telefone" placeholder="(00) 90000-0000" required
+                  class="ad-form__input">
+              </div>
+            </div>
+
+            <div class="ad-form__row">
+              <div class="ad-form__group">
+                <label for="item-cidade" class="ad-form__label">Cidade / Estado *</label>
+                <input type="text" id="item-cidade" name="cidade" placeholder="Ex: Brasília - DF" required
+                  class="ad-form__input">
+              </div>
+
+              <div class="ad-form__group">
+                <label for="item-bairro" class="ad-form__label">Bairro ou Região *</label>
+                <input type="text" id="item-bairro" name="bairro" placeholder="Ex: Asa Sul, Taguatinga..." required
+                  class="ad-form__input">
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- BOTÕES DE AÇÃO -->
+          <div class="ad-form__actions">
+            <a href="index.html" class="btn btn--secondary">Cancelar</a>
+            <button type="submit" class="btn btn--primary">Publicar Anúncio</button>
+          </div>
+
+        </form>
+      </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+      <div class="container footer__wrapper">
+        <p class="footer__copy">&copy; 2026 Brike Place. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>
